@@ -1,4 +1,4 @@
 pip==22.3.1 
 gspread
-ServiceAccountCredentials
+oauth2client
 pprint
