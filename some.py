@@ -6,7 +6,8 @@ import pandas as pd
 # submit = my_form.form_submit_button(label = "Submit this form")
 import gspread
 from oauth2client.service_account import ServiceAccountCredentials
-from pprint import pprint
+
+
 
 scope = ["https://spreadsheets.google.com/feeds",'https://www.googleapis.com/auth/spreadsheets',"https://www.googleapis.com/auth/drive.file","https://www.googleapis.com/auth/drive"]
 creds = ServiceAccountCredentials.from_json_keyfile_name("final.json", scope)
@@ -26,5 +27,5 @@ with header:
         row=[inp,age]
         data=sheet.get_all_records()
         sheet.insert_row(row,len(data)+2)
-        pprint(sheet.get_all_records)
+        #pprint(sheet.get_all_records)
     
