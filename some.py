@@ -27,5 +27,4 @@ with header:
         row=[inp,age]
         data=sheet.get_all_records()
         sheet.insert_row(row,len(data)+2)
-        #pprint(sheet.get_all_records)
     
