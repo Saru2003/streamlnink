@@ -43,7 +43,7 @@ if sb=="One":
     ph=st.text_input('Mobile number of participant  ')
     pdf=st.file_uploader("College ID { in PDF format }",type=['PDF'])
     if pdf is not None:
-            with open("/home/sarvesh/Documents/pdfs/("+name+ ")"+pdf.name,"wb") as f:
+            with open(pdf.name,"wb") as f:
                 f.write(pdf.getbuffer())
             st.success("Done")
 
@@ -88,7 +88,7 @@ if sb=="One":
             print(row)
             data=sheet.get_all_values()
             sheet.insert_row(["One"]+row,len(data)+1)
-            st.markdown(f'<h1 style="color:#33ff33;font-size:19px;">{"Successfully registered"}</h1>', unsafe_allow_html=True)
+            st.markdown(f'<h1 style="color:#33ff33;font-size:25px;font-family: Verdana, Geneva, Tahoma, sans-serif">{"Successfully registered"}</h1>', unsafe_allow_html=True)
             # st.button("Next",on_click=)
             st.markdown('<form> <button class="w3-button w3-green">Click to complete registration</button></form>', unsafe_allow_html=True)
 
@@ -102,7 +102,7 @@ if sb=="Two":
     ph1=st.text_input('Mobile number of participant 1:')
     pdf1=st.file_uploader("College ID of paticipant 1 { in PDF format }",type=['PDF'])
     if pdf1 is not None:
-            with open("/home/sarvesh/Documents/pdfs/("+name1+ ")"+pdf1.name,"wb") as f:
+            with open(pdf1.name,"wb") as f:
                 f.write(pdf1.getbuffer())
             st.success("Done")
     
@@ -115,7 +115,7 @@ if sb=="Two":
     ph2=st.text_input('Mobile number of participant 2:')
     pdf2=st.file_uploader("College ID of paticipant 2 { in PDF format }",type=['PDF'])
     if pdf2 is not None:
-            with open("/home/sarvesh/Documents/pdfs/("+name2+ ")"+pdf2.name,"wb") as f:
+            with open(pdf2.name,"wb") as f:
                 f.write(pdf2.getbuffer())
             st.success("Done")
     if st.button("Submit"):
@@ -200,4 +200,5 @@ if sb=="Two":
             sheet.insert_row(["Two"]+row1+["Second"]+row2,len(data)+1)
             # st.markdown(f'<h1 style="color:#33ff33;font-size:25px;">{"Successfully registered"}</h1>', unsafe_allow_html=True)
             # st.button("Next",on_click=)
+            st.markdown(f'<h1 style="color:#33ff33;font-size:25px;font-family: Verdana, Geneva, Tahoma, sans-serif">{"Successfully registered"}</h1>', unsafe_allow_html=True)
             st.markdown('<form> <button class="w3-button w3-green">Click to complete registration</button></form>', unsafe_allow_html=True)
