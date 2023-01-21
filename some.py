@@ -40,7 +40,7 @@ if sb=="One":
     mail=st.text_input('Mail ID of participant: ')
     clg=st.text_input('College name of participant: ')
     year=st.selectbox("Year of study for participant: ",options=["--Choose--","I","II","III","IV","V"],index=0)
-    ph=st.text_input('Mobile number of participant  ')
+    ph=st.text_input('Mobile number of participant  (follow this format: 93xxxxxxxx): ')
     pdf=st.file_uploader("College ID { in PDF format }",type=['PDF'])
     if pdf is not None:
             with open(pdf.name,"wb") as f:
